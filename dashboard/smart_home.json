@@ -1,0 +1,1009 @@
+{
+  "title": "Smart Home",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "7242d810-73af-b245-7121-2242d09c2ee4": {
+        "typeFullFqn": "tenant.title_text",
+        "type": "static",
+        "sizeX": 6.5,
+        "sizeY": 1.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "static",
+              "name": "function",
+              "dataKeys": [
+                {
+                  "name": "f(x)",
+                  "type": "function",
+                  "label": "Random",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.15479322438769105,
+                  "funcBody": "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "title": "Good Morning!"
+          },
+          "title": "Title text",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7242d810-73af-b245-7121-2242d09c2ee4"
+      },
+      "25ffc03c-0c66-86a9-53ee-652e014b8eff": {
+        "typeFullFqn": "tenant.last_value_card",
+        "type": "latest",
+        "sizeX": 5,
+        "sizeY": 2.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "device",
+              "name": "",
+              "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.7069486585565368
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1718552062553,
+                "endTimeMs": 1718638462553
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "title": "Indoor Temp",
+            "unit": "°C"
+          },
+          "title": "Last Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "useDashboardTimewindow": true,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "25ffc03c-0c66-86a9-53ee-652e014b8eff"
+      },
+      "829be649-7c41-eb9e-552d-922b8e813f80": {
+        "typeFullFqn": "tenant.last_value_card",
+        "type": "latest",
+        "sizeX": 5,
+        "sizeY": 2.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "device",
+              "name": "",
+              "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.0992069952296113
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1718552162836,
+                "endTimeMs": 1718638562836
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "title": "Outdoor Temp",
+            "unit": "°C"
+          },
+          "title": "Last Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "useDashboardTimewindow": true,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "829be649-7c41-eb9e-552d-922b8e813f80"
+      },
+      "6a8b6a6d-d74d-8b6b-8751-25c29f426750": {
+        "typeFullFqn": "tenant.last_value_card",
+        "type": "latest",
+        "sizeX": 5,
+        "sizeY": 2.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "device",
+              "name": "",
+              "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.0772435424476825
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1718552207616,
+                "endTimeMs": 1718638607616
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "title": "Humidity",
+            "unit": "%"
+          },
+          "title": "Last Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "useDashboardTimewindow": true,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6a8b6a6d-d74d-8b6b-8751-25c29f426750"
+      },
+      "be3211df-c583-4da2-8e31-40d01720b010": {
+        "typeFullFqn": "tenant.last_value_card",
+        "type": "latest",
+        "sizeX": 5,
+        "sizeY": 2.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "device",
+              "name": "",
+              "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.14271642869406342
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1718553606747,
+                "endTimeMs": 1718640006747
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "title": "Energy Used",
+            "unit": "kw"
+          },
+          "title": "Last Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "useDashboardTimewindow": true,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "be3211df-c583-4da2-8e31-40d01720b010"
+      },
+      "dde5277f-224a-45c5-9101-332d581e94aa": {
+        "typeFullFqn": "tenant.camera_viewer",
+        "type": "static",
+        "sizeX": 5.5,
+        "sizeY": 5.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "static",
+              "name": "function",
+              "dataKeys": [
+                {
+                  "name": "f(x)",
+                  "type": "function",
+                  "label": "Random",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.15479322438769105,
+                  "funcBody": "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "subtitle": "Camara",
+            "title": "Hidden Camara"
+          },
+          "title": "Camera Viewer",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "dde5277f-224a-45c5-9101-332d581e94aa"
+      },
+      "553d2a26-d40e-a36d-320e-3a69472acae3": {
+        "typeFullFqn": "tenant.chart",
+        "type": "timeseries",
+        "sizeX": 7.5,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "device",
+              "name": "",
+              "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.016082528689438158
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "stack": false,
+            "fontSize": 10,
+            "fontColor": "#545454",
+            "showTooltip": true,
+            "tooltipIndividual": false,
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "grid": {
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1,
+              "color": "#545454",
+              "backgroundColor": null,
+              "tickColor": "#DDDDDD"
+            },
+            "xaxis": {
+              "title": null,
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "min": null,
+              "max": null,
+              "title": null,
+              "showLabels": true,
+              "color": "#545454",
+              "tickSize": null,
+              "tickDecimals": 0,
+              "ticksFormatter": ""
+            },
+            "shadowSize": 4,
+            "smoothLines": false,
+            "comparisonEnabled": false,
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "title": null,
+              "showLabels": true
+            },
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": true,
+              "showTotal": false,
+              "showLatest": false
+            },
+            "customLegendEnabled": false
+          },
+          "title": "Chart",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "configMode": "advanced",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "useDashboardTimewindow": true,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "553d2a26-d40e-a36d-320e-3a69472acae3"
+      },
+      "3e95485d-5fb7-a669-2727-b85b4cb461db": {
+        "typeFullFqn": "tenant.device_card",
+        "type": "rpc",
+        "sizeX": 5,
+        "sizeY": 5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "deviceTitle": "Humidifier",
+            "deviceSubtitle": "Remax RT-A300",
+            "imageName": "/api/images/public/4dkyQ3xhwWMgDUYcZSI71QNxndRSvaRt",
+            "rpcMethod": "set_switch",
+            "rpcType": "oneway"
+          },
+          "title": "Device Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff"
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3e95485d-5fb7-a669-2727-b85b4cb461db"
+      },
+      "7382660b-82ef-ddee-bb77-9fd7874ab1e4": {
+        "typeFullFqn": "tenant.device_card",
+        "type": "rpc",
+        "sizeX": 5,
+        "sizeY": 5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "deviceTitle": "Chandalier",
+            "deviceSubtitle": "Accento ALG-789/2",
+            "imageName": "/api/images/public/66XZY4m0NLWEjoqPcs2LGq9eIpO1NHNF",
+            "rpcMethod": "rpcMethod",
+            "rpcType": "oneway"
+          },
+          "title": "Device Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff"
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7382660b-82ef-ddee-bb77-9fd7874ab1e4"
+      },
+      "7e674965-9fe5-983c-67b4-e8b098f002b0": {
+        "typeFullFqn": "tenant.device_card",
+        "type": "rpc",
+        "sizeX": 5,
+        "sizeY": 5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "deviceTitle": "Music Speaker",
+            "deviceSubtitle": "Technics SC-C50",
+            "imageName": "/api/images/public/5PQcXwmknsmcI0JRKcmoctThfthMWG23",
+            "rpcMethod": "rpcMethod",
+            "rpcType": "oneway"
+          },
+          "title": "Device Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff"
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7e674965-9fe5-983c-67b4-e8b098f002b0"
+      },
+      "5c673a4f-c5e8-3f88-efeb-9b11dc9f2987": {
+        "typeFullFqn": "tenant.device_card",
+        "type": "rpc",
+        "sizeX": 5,
+        "sizeY": 5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "deviceTitle": "Vaccumm Cleaner",
+            "deviceSubtitle": "RoboRock S6P02",
+            "imageName": "/api/images/public/Onnu5ttFRkOYYEhkGbjCOM0DGF0FEysk",
+            "rpcMethod": "rpcMethod",
+            "rpcType": "oneway"
+          },
+          "title": "Device Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff"
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5c673a4f-c5e8-3f88-efeb-9b11dc9f2987"
+      },
+      "56e83066-4bd9-7433-82bc-b57a0096a0ea": {
+        "typeFullFqn": "tenant.radial_slider",
+        "type": "rpc",
+        "sizeX": 7,
+        "sizeY": 7.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "parseGpioStatusFunction": "return body[pin] === true;",
+            "gpioStatusChangeRequest": {
+              "method": "setGpioStatus",
+              "paramsBody": "{\n   \"pin\": \"{$pin}\",\n   \"enabled\": \"{$enabled}\"\n}"
+            },
+            "requestTimeout": 500,
+            "switchPanelBackgroundColor": "#b71c1c",
+            "gpioStatusRequest": {
+              "method": "getGpioStatus",
+              "paramsBody": "{}"
+            },
+            "gpioList": [
+              {
+                "pin": 1,
+                "label": "GPIO 1",
+                "row": 0,
+                "col": 0,
+                "_uniqueKey": 0
+              },
+              {
+                "pin": 2,
+                "label": "GPIO 2",
+                "row": 0,
+                "col": 1,
+                "_uniqueKey": 1
+              },
+              {
+                "pin": 3,
+                "label": "GPIO 3",
+                "row": 1,
+                "col": 0,
+                "_uniqueKey": 2
+              }
+            ]
+          },
+          "title": "Radial Slider",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff"
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "56e83066-4bd9-7433-82bc-b57a0096a0ea"
+      },
+      "2c0c9343-bd44-e9fb-3e64-23d0cbd828e5": {
+        "typeFullFqn": "tenant.table_alarm",
+        "type": "alarm",
+        "sizeX": 10.5,
+        "sizeY": 6,
+        "config": {
+          "timewindow": {
+            "hideInterval": false,
+            "hideLastInterval": false,
+            "hideQuickInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 43200000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 1000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            },
+            "timezone": null
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "alarmSeverityColorFunction": "if(severity == 'CRITICAL') {return 'red';} else if (severity == 'MAJOR') {return 'orange';} else return 'green'; "
+          },
+          "title": "Table Alarm",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "alarmSource": {
+            "type": "device",
+            "name": "",
+            "deviceId": "cde78cc0-2398-11ef-b19f-cdc6a3f105ff",
+            "entityAliasId": null,
+            "dataKeys": [
+              {
+                "name": "createdTime",
+                "type": "alarm",
+                "label": "Created time",
+                "color": "#2196f3",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.021092237451093787,
+                "funcBody": null
+              },
+              {
+                "name": "originator",
+                "type": "alarm",
+                "label": "Originator",
+                "color": "#4caf50",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.2780007688856758,
+                "funcBody": null
+              },
+              {
+                "name": "status",
+                "type": "alarm",
+                "label": "Status",
+                "color": "#607d8b",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.6588418951443418,
+                "funcBody": null
+              }
+            ],
+            "alarmFilterConfig": {
+              "statusList": [
+                "ACTIVE"
+              ]
+            }
+          },
+          "alarmsPollingInterval": 5,
+          "showTitleIcon": false,
+          "titleIcon": "warning",
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "displayTimewindow": false,
+          "actions": {},
+          "configMode": "basic",
+          "alarmFilterConfig": {
+            "statusList": [],
+            "severityList": [],
+            "typeList": [],
+            "searchPropagatedAlarms": false
+          },
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "datasources": []
+        },
+        "row": 0,
+        "col": 0,
+        "id": "2c0c9343-bd44-e9fb-3e64-23d0cbd828e5"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Smart Home",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "7242d810-73af-b245-7121-2242d09c2ee4": {
+                "sizeX": 8,
+                "sizeY": 1,
+                "row": 0,
+                "col": 1
+              },
+              "25ffc03c-0c66-86a9-53ee-652e014b8eff": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "row": 1,
+                "col": 1
+              },
+              "829be649-7c41-eb9e-552d-922b8e813f80": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "row": 1,
+                "col": 5
+              },
+              "6a8b6a6d-d74d-8b6b-8751-25c29f426750": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "row": 1,
+                "col": 9
+              },
+              "be3211df-c583-4da2-8e31-40d01720b010": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "row": 1,
+                "col": 13
+              },
+              "dde5277f-224a-45c5-9101-332d581e94aa": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 3,
+                "col": 1
+              },
+              "553d2a26-d40e-a36d-320e-3a69472acae3": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 3,
+                "col": 9
+              },
+              "3e95485d-5fb7-a669-2727-b85b4cb461db": {
+                "sizeX": 4,
+                "sizeY": 4,
+                "row": 9,
+                "col": 1
+              },
+              "7382660b-82ef-ddee-bb77-9fd7874ab1e4": {
+                "sizeX": 4,
+                "sizeY": 4,
+                "row": 9,
+                "col": 5
+              },
+              "7e674965-9fe5-983c-67b4-e8b098f002b0": {
+                "sizeX": 4,
+                "sizeY": 4,
+                "row": 9,
+                "col": 9
+              },
+              "5c673a4f-c5e8-3f88-efeb-9b11dc9f2987": {
+                "sizeX": 4,
+                "sizeY": 4,
+                "row": 9,
+                "col": 13
+              },
+              "56e83066-4bd9-7433-82bc-b57a0096a0ea": {
+                "sizeX": 6,
+                "sizeY": 9,
+                "row": 0,
+                "col": 17
+              },
+              "2c0c9343-bd44-e9fb-3e64-23d0cbd828e5": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 9,
+                "col": 17
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#F6F7F9",
+              "columns": 30,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {},
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideLastInterval": false,
+      "hideQuickInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1718553828442,
+          "endTimeMs": 1718640228442
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": false,
+      "showFilters": true,
+      "showUpdateDashboardImage": true,
+      "dashboardCss": ""
+    }
+  },
+  "name": "Smart Home"
+}
