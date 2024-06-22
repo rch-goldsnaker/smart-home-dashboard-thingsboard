@@ -26,7 +26,7 @@ constexpr int LED_PIN5 = 27;
 // WiFi and ThingsBoard Configuration
 constexpr char WIFI_SSID[] = "Wokwi-GUEST";
 constexpr char WIFI_PASSWORD[] = "";
-constexpr char TOKEN[] = "7hVoTzIu2CfPV3hmM7m9";
+constexpr char TOKEN[] = "8AIEOQRywKJ8NLTDdgcq";
 constexpr char THINGSBOARD_SERVER[] = "thingsboard.cloud";
 constexpr uint16_t THINGSBOARD_PORT = 1883U;
 constexpr uint32_t MAX_MESSAGE_SIZE = 1024U;
@@ -220,6 +220,12 @@ void loop() {
   
   tb.sendTelemetryData("tempOutdoor", random(10, 20));
   tb.sendTelemetryData("energy", random(10, 20));
+
+  tb.sendAttributeData("rssi", WiFi.RSSI());
+  tb.sendAttributeData("channel", WiFi.channel());
+  tb.sendAttributeData("bssid", WiFi.BSSIDstr().c_str());
+  tb.sendAttributeData("localIp", WiFi.localIP().toString().c_str());
+  tb.sendAttributeData("ssid", WiFi.SSID().c_str());
 
   Serial.print("Temp ");
   Serial.print(t);
