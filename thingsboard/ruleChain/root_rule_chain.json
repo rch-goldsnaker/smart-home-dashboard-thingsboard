@@ -9,7 +9,7 @@
     "configuration": null
   },
   "metadata": {
-    "firstNodeIndex": 9,
+    "firstNodeIndex": 8,
     "nodes": [
       {
         "additionalInfo": {
@@ -57,23 +57,6 @@
         "configurationVersion": 0,
         "configuration": {
           "version": 0
-        }
-      },
-      {
-        "additionalInfo": {
-          "layoutX": 362,
-          "layoutY": 604
-        },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
-        "name": "Log RPC from Device",
-        "debugMode": false,
-        "singletonMode": false,
-        "queueName": null,
-        "configurationVersion": 0,
-        "configuration": {
-          "scriptLang": "TBEL",
-          "jsScript": "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
-          "tbelScript": "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
         }
       },
       {
@@ -195,62 +178,8 @@
       {
         "additionalInfo": {
           "description": "",
-          "layoutX": 170,
-          "layoutY": 709
-        },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
-        "name": "script",
-        "debugMode": false,
-        "singletonMode": false,
-        "queueName": null,
-        "configurationVersion": 0,
-        "configuration": {
-          "scriptLang": "JS",
-          "jsScript": "return {msg: {time:String(new Date())}, metadata: metadata, msgType: msgType};",
-          "tbelScript": "return {msg: msg, metadata: metadata, msgType: msgType};"
-        }
-      },
-      {
-        "additionalInfo": {
-          "description": "",
-          "layoutX": 615,
-          "layoutY": 707
-        },
-        "type": "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode",
-        "name": "rpc reply",
-        "debugMode": false,
-        "singletonMode": false,
-        "queueName": null,
-        "configurationVersion": 0,
-        "configuration": {
-          "serviceIdMetaDataAttribute": "serviceId",
-          "sessionIdMetaDataAttribute": "sessionId",
-          "requestIdMetaDataAttribute": "requestId"
-        }
-      },
-      {
-        "additionalInfo": {
-          "description": "",
-          "layoutX": 1263,
-          "layoutY": 452
-        },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
-        "name": "logtelemetry",
-        "debugMode": false,
-        "singletonMode": false,
-        "queueName": null,
-        "configurationVersion": 0,
-        "configuration": {
-          "scriptLang": "TBEL",
-          "jsScript": "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
-          "tbelScript": "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
-        }
-      },
-      {
-        "additionalInfo": {
-          "description": "",
-          "layoutX": 895,
-          "layoutY": 51
+          "layoutX": 1002,
+          "layoutY": 110
         },
         "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
         "name": "Connect envent to Server",
@@ -267,8 +196,8 @@
       {
         "additionalInfo": {
           "description": null,
-          "layoutX": 1214,
-          "layoutY": 133
+          "layoutX": 1277,
+          "layoutY": 134
         },
         "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "Save Attributes",
@@ -286,8 +215,8 @@
       {
         "additionalInfo": {
           "description": "",
-          "layoutX": 923,
-          "layoutY": 162
+          "layoutX": 1009,
+          "layoutY": 186
         },
         "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
         "name": "Disconnect event to Server",
@@ -304,16 +233,6 @@
     ],
     "connections": [
       {
-        "fromIndex": 0,
-        "toIndex": 13,
-        "type": "Failure"
-      },
-      {
-        "fromIndex": 0,
-        "toIndex": 13,
-        "type": "Success"
-      },
-      {
         "fromIndex": 2,
         "toIndex": 0,
         "type": "Post telemetry"
@@ -325,33 +244,38 @@
       },
       {
         "fromIndex": 2,
-        "toIndex": 4,
+        "toIndex": 3,
         "type": "Other"
       },
       {
         "fromIndex": 2,
-        "toIndex": 5,
+        "toIndex": 4,
         "type": "RPC Request to Device"
       },
       {
         "fromIndex": 2,
-        "toIndex": 10,
+        "toIndex": 9,
         "type": "Generate Report"
       },
       {
         "fromIndex": 2,
-        "toIndex": 11,
-        "type": "RPC Request from Device"
-      },
-      {
-        "fromIndex": 2,
-        "toIndex": 14,
+        "toIndex": 10,
         "type": "Connect Event"
       },
       {
         "fromIndex": 2,
-        "toIndex": 16,
+        "toIndex": 12,
         "type": "Disconnect Event"
+      },
+      {
+        "fromIndex": 5,
+        "toIndex": 2,
+        "type": "False"
+      },
+      {
+        "fromIndex": 5,
+        "toIndex": 6,
+        "type": "True"
       },
       {
         "fromIndex": 6,
@@ -366,41 +290,21 @@
       {
         "fromIndex": 7,
         "toIndex": 2,
-        "type": "False"
-      },
-      {
-        "fromIndex": 7,
-        "toIndex": 8,
-        "type": "True"
+        "type": "Success"
       },
       {
         "fromIndex": 8,
-        "toIndex": 2,
+        "toIndex": 5,
         "type": "Success"
       },
       {
-        "fromIndex": 9,
-        "toIndex": 6,
+        "fromIndex": 10,
+        "toIndex": 11,
         "type": "Success"
       },
       {
-        "fromIndex": 11,
-        "toIndex": 12,
-        "type": "Failure"
-      },
-      {
-        "fromIndex": 11,
-        "toIndex": 12,
-        "type": "Success"
-      },
-      {
-        "fromIndex": 14,
-        "toIndex": 15,
-        "type": "Success"
-      },
-      {
-        "fromIndex": 16,
-        "toIndex": 15,
+        "fromIndex": 12,
+        "toIndex": 11,
         "type": "Success"
       }
     ],
