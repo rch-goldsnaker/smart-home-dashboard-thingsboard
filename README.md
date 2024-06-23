@@ -45,7 +45,7 @@ Reference Link:
 
 ## <a name="youtube">🎬 Youtube tutorial</a>
 
-See tutorial video [here](https://youtu.be/0S_tuXnm1ps)
+See tutorial video [here](https://youtu.be/BNrXaqvd8oU?si=g4tykfJvKAoqc3_o)
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
